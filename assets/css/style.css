@@ -16,7 +16,12 @@
 
 body {
     margin: 0; /* Remove a margem padrão do body. */
-    background: var(--bg-color); /* Define a cor de fundo usando a variável --bg-color. */
+    background-color: var(--bg-color); /* Cor de fallback caso a imagem não carregue */
+    background-image: url('https://lh3.googleusercontent.com/gg-dl/ABS2GSnXf5Td_IhHxFcegRUYwQKNraYvF-Zz2r631mFdSVey_nkNpvGYCiYdcclAcd3h4VVgqlZh0PCynzzHe1d87NoFdqs3ivYlW1UN_LexzOBT4DBpMhVhIS2g3pT5nlclGBIWgnPsWuL-L205qfAj5sVSC1d130lAmnTXGwS0Q0MQ0w_0=s1024-rj');
+    background-size: cover; /* Cobre todo o espaço disponível */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa durante a rolagem */
     color: var(--secondary-color); /* Define a cor do texto padrão usando a variável --secondary-color. */
     font-family: "Exo 2", sans-serif; /* Nova fonte */
 }
@@ -153,7 +158,8 @@ div input:focus {
 .swiper-container {
     width: 100%;
     max-width: 450px; /* Largura máxima de um card, para o modo de 1 slide */
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2rem 0;
 }
 
@@ -176,10 +182,18 @@ div input:focus {
     min-height: 350px; /* Altura mínima para manter a consistência */
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* Efeito de hover apenas no card do slide ativo (central) */
+.swiper-slide-active .card:hover {
+    transform: scale(1.05) translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: 0 10px 30px -15px var(--primary-glow);
+}
+
+/* Transição suave para os slides não ativos */
+.swiper-slide:not(.swiper-slide-active) {
+    transition: transform 0.4s ease-out;
+    transform: scale(0.9); /* Deixa os slides laterais um pouco menores */
+    opacity: 0.7; /* Deixa os slides laterais um pouco transparentes */
 }
 
 .card-header {
@@ -285,17 +299,47 @@ div input:focus {
 }
 
 /* Estilização dos controles do Swiper */
+.swiper-pagination {
+    position: relative; /* Tira do posicionamento absoluto padrão */
+    bottom: auto; /* Reseta a propriedade 'bottom' */
+    margin-top: 1.5rem; /* Adiciona um espaço entre o carrossel e a paginação */
+}
+
 .swiper-pagination-bullet {
     background: var(--tertiary-color);
+    opacity: 0.5; /* Aumenta um pouco a visibilidade dos inativos */
+    width: 8px; /* Tamanho padrão */
+    height: 8px; /* Tamanho padrão */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Transição suave */
 }
 
 .swiper-pagination-bullet-active {
     background: var(--primary-color);
+    opacity: 1;
+    width: 24px; /* Expande o ponto ativo */
+    border-radius: 5px; /* Cria o efeito de pílula */
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--primary-color);
+    top: calc(50% - 1rem); /* Ajusta a posição vertical para alinhar melhor com o centro do card */
+}
+
+/* Responsividade para as setas de navegação */
+@media (min-width: 550px) {
+    .swiper-container {
+        /* Aumenta a largura máxima para dar espaço para as setas fora do card */
+        max-width: 550px; 
+    }
+
+    .swiper-button-prev {
+        left: 0; /* Move a seta para a borda esquerda */
+    }
+
+    .swiper-button-next {
+        right: 0; /* Move a seta para a borda direita */
+    }
 }
 
 /* Estilo para mensagem de "sem resultados" */
@@ -348,24 +392,26 @@ div input:focus {
     }
 }
 .about-section {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            text-align: center;
-        }
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
 
 .about-section h2 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
 .about-section p {
-            line-height: 1.6;
-            color: var(--secondary-color);
-        }
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
 .about-section:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            
-        }
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px -15px var(--primary-glow);
+}

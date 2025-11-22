@@ -1,0 +1,377 @@
+[
+  {
+    "nome": "JavaScript",
+    "descricao": "JavaScript é uma linguagem de programação leve, interpretada e baseada em objetos.",
+    "data_criacao": "1995",
+    "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
+    "tags": [
+      "linguagem de programação",
+      "frontend",
+      "web development",
+      "scripting"
+    ]
+  },
+  {
+    "nome": "Python",
+    "descricao": "O Python é a linguagem da ciência de dados e da IA",
+    "data_criacao": "1991",
+    "link": "https://docs.python.org/3/",
+    "tags": [
+      "linguagem de programação",
+      "backend",
+      "data science",
+      "IA",
+      "scripting"
+    ]
+  },
+  {
+    "nome": "Java",
+    "descricao": "Java é uma linguagem de programação orientada a objetos, de propósito geral, popular para aplicações empresariais, web e móveis (Android).",
+    "data_criacao": "1995",
+    "link": "https://docs.oracle.com/en/java/",
+    "tags": [
+      "linguagem de programação",
+      "backend",
+      "enterprise",
+      "mobile",
+      "JVM"
+    ]
+  },
+  {
+    "nome": "C#",
+    "descricao": "C# (pronuncia-se 'C sharp') é uma linguagem moderna, orientada a objetos e desenvolvida pela Microsoft como parte da sua plataforma .NET.",
+    "data_criacao": "2000",
+    "link": "https://docs.microsoft.com/pt-br/dotnet/csharp/",
+    "tags": [
+      "linguagem de programação",
+      "backend",
+      ".NET",
+      "Microsoft",
+      "game development"
+    ]
+  },
+  {
+    "nome": "PHP",
+    "descricao": "PHP é uma linguagem de script do lado do servidor amplamente utilizada, especialmente adequada para o desenvolvimento web.",
+    "data_criacao": "1995",
+    "link": "https://www.php.net/manual/pt_BR/",
+    "tags": ["linguagem de programação", "backend", "web development", "servidor"]
+  },
+  {
+    "nome": "C++",
+    "descricao": "C++ é uma linguagem de programação de propósito geral com recursos de programação orientada a objetos. É uma extensão da linguagem C.",
+    "data_criacao": "1985",
+    "link": "https://isocpp.org/get-started",
+    "tags": ["linguagem de programação", "sistemas", "performance", "game development"]
+  },
+  {
+    "nome": "TypeScript",
+    "descricao": "TypeScript é um superconjunto de JavaScript que adiciona tipagem estática opcional à linguagem, desenvolvido pela Microsoft.",
+    "data_criacao": "2012",
+    "link": "https://www.typescriptlang.org/docs/",
+    "tags": ["linguagem de programação", "frontend", "backend", "tipagem estatica"]
+  },
+  {
+    "nome": "Go",
+    "descricao": "Linguagem de programação compilada e estaticamente tipada, projetada pelo Google para eficiência e concorrência.",
+    "data_criacao": "2009",
+    "link": "https://go.dev/",
+    "tags": [
+      "linguagem de programação",
+      "backend",
+      "concorrencia",
+      "sistemas"
+    ]
+  },
+  {
+    "nome": "Kotlin",
+    "descricao": "Linguagem de programação moderna e pragmática, totalmente interoperável com Java e preferida para desenvolvimento Android.",
+    "data_criacao": "2011",
+    "link": "https://kotlinlang.org/",
+    "tags": [
+      "linguagem de programação",
+      "mobile",
+      "JVM",
+      "backend"
+    ]
+  },
+  {
+    "nome": "Swift",
+    "descricao": "Linguagem de programação desenvolvida pela Apple para construir aplicativos para iOS, macOS, watchOS e tvOS.",
+    "data_criacao": "2014",
+    "link": "https://www.swift.org/",
+    "tags": [
+      "linguagem de programação",
+      "mobile",
+      "Apple",
+      "sistemas"
+    ]
+  },
+  {
+    "nome": "Rust",
+    "descricao": "Linguagem de programação focada em segurança, velocidade e concorrência, garantindo segurança de memória sem garbage collector.",
+    "data_criacao": "2010",
+    "link": "https://www.rust-lang.org/",
+    "tags": [
+      "linguagem de programação",
+      "performance",
+      "sistemas",
+      "baixo nivel"
+    ]
+  },
+  {
+    "nome": "Scala",
+    "descricao": "Linguagem que combina recursos de linguagens orientadas a objetos e funcionais, rodando na Java Virtual Machine (JVM).",
+    "data_criacao": "2004",
+    "link": "https://www.scala-lang.org/",
+    "tags": [
+      "linguagem de programação",
+      "funcional",
+      "JVM",
+      "big data"
+    ]
+  },
+  {
+    "nome": "React",
+    "descricao": "Biblioteca declarativa e eficiente para construir interfaces de usuário, mantida pelo Facebook (Meta).",
+    "data_criacao": "2013",
+    "link": "https://reactjs.org/",
+    "tags": [
+      "biblioteca",
+      "frontend",
+      "UI",
+      "web development"
+    ]
+  },
+  {
+    "nome": "Angular",
+    "descricao": "Framework de código aberto mantido pelo Google para construir grandes Single Page Applications (SPAs).",
+    "data_criacao": "2016",
+    "link": "https://angular.io/",
+    "tags": [
+      "framework",
+      "frontend",
+      "SPA",
+      "Google"
+    ]
+  },
+  {
+    "nome": "Vue.js",
+    "descricao": "Framework progressivo para a construção de interfaces de usuário, conhecido por sua curva de aprendizado suave.",
+    "data_criacao": "2014",
+    "link": "https://vuejs.org/",
+    "tags": [
+      "framework",
+      "frontend",
+      "reativo",
+      "web development"
+    ]
+  },
+  {
+    "nome": "Docker",
+    "descricao": "Plataforma para desenvolver, enviar e executar aplicativos dentro de containers isolados e portáteis.",
+    "data_criacao": "2013",
+    "link": "https://www.docker.com/",
+    "tags": [
+      "conteinerizacao",
+      "devops",
+      "ferramenta",
+      "virtualizacao"
+    ]
+  },
+  {
+    "nome": "Kubernetes",
+    "descricao": "Sistema de código aberto para automatizar a implantação, dimensionamento e gerenciamento de aplicativos em contêineres.",
+    "data_criacao": "2014",
+    "link": "https://kubernetes.io/",
+    "tags": [
+      "orquestracao",
+      "devops",
+      "nuvem",
+      "containers",
+      "ferramenta"
+    ]
+  },
+  {
+    "nome": "MongoDB",
+    "descricao": "Banco de dados NoSQL orientado a documentos, conhecido por sua escalabilidade e flexibilidade de esquema.",
+    "data_criacao": "2009",
+    "link": "https://www.mongodb.com/",
+    "tags": [
+      "banco de dados",
+      "NoSQL",
+      "documentos",
+      "escalabilidade"
+    ]
+  },
+  {
+    "nome": "PostgreSQL",
+    "descricao": "Sistema de gerenciamento de banco de dados objeto-relacional de código aberto, conhecido por sua robustez e conformidade com padrões.",
+    "data_criacao": "1996",
+    "link": "https://www.postgresql.org/",
+    "tags": [
+      "banco de dados",
+      "relacional",
+      "SQL",
+      "open source"
+    ]
+  },
+  {
+    "nome": "Redis",
+    "descricao": "Estrutura de dados em memória, utilizada como cache, banco de dados e message broker de alto desempenho.",
+    "data_criacao": "2009",
+    "link": "https://redis.io/",
+    "tags": [
+      "banco de dados",
+      "cache",
+      "in-memory",
+      "NoSQL"
+    ]
+  },
+  {
+    "nome": "Node.js",
+    "descricao": "Ambiente de execução (runtime) que permite executar código fora do navegador, comumente usado para desenvolvimento backend assíncrono.",
+    "data_criacao": "2009",
+    "link": "https://nodejs.org/",
+    "tags": [
+      "runtime",
+      "backend",
+      "assincrono",
+      "servidor"
+    ]
+  },
+  {
+    "nome": "Terraform",
+    "descricao": "Ferramenta de Infraestrutura como Código (IaC) que permite provisionar e gerenciar recursos de infraestrutura de forma declarativa.",
+    "data_criacao": "2014",
+    "link": "https://www.terraform.io/",
+    "tags": [
+      "IaC",
+      "devops",
+      "cloud",
+      "ferramenta",
+      "HashiCorp"
+    ]
+  },
+  {
+    "nome": "AWS Lambda",
+    "descricao": "Serviço de computação serverless da Amazon Web Services (AWS) que executa código em resposta a eventos.",
+    "data_criacao": "2014",
+    "link": "https://aws.amazon.com/lambda/",
+    "tags": [
+      "serverless",
+      "FaaS",
+      "cloud computing",
+      "AWS"
+    ]
+  },
+  {
+    "nome": "GraphQL",
+    "descricao": "Linguagem de consulta e manipulação de dados para APIs, oferecendo uma alternativa eficiente ao REST.",
+    "data_criacao": "2015",
+    "link": "https://graphql.org/",
+    "tags": [
+      "API",
+      "consulta",
+      "backend",
+      "Facebook"
+    ]
+  },
+  {
+    "nome": "Django",
+    "descricao": "Framework web de alto nível que incentiva o desenvolvimento rápido e design limpo e pragmático (utiliza Python).",
+    "data_criacao": "2005",
+    "link": "https://www.djangoproject.com/",
+    "tags": [
+      "framework",
+      "web development",
+      "backend",
+      "ORM"
+    ]
+  },
+  {
+    "nome": "Spring Boot",
+    "descricao": "Extensão do Spring Framework que simplifica a criação de aplicativos Spring autônomos e prontos para produção.",
+    "data_criacao": "2014",
+    "link": "https://spring.io/projects/spring-boot",
+    "tags": [
+      "framework",
+      "backend",
+      "microsservicos",
+      "JVM"
+    ]
+  },
+  {
+    "nome": "Git",
+    "descricao": "Sistema de controle de versão distribuído, amplamente utilizado para rastrear mudanças no código-fonte durante o desenvolvimento de software.",
+    "data_criacao": "2005",
+    "link": "https://git-scm.com/",
+    "tags": [
+      "controle de versao",
+      "ferramenta",
+      "devops",
+      "colaboracao"
+    ]
+  },
+  {
+    "nome": "Apache Kafka",
+    "descricao": "Plataforma de streaming de eventos distribuída de alto desempenho, usada para pipelines de dados e integração de sistemas.",
+    "data_criacao": "2011",
+    "link": "https://kafka.apache.org/",
+    "tags": [
+      "streaming",
+      "mensageria",
+      "distribuido",
+      "big data"
+    ]
+  },
+  {
+    "nome": "Svelte",
+    "descricao": "Framework de interface de usuário que compila o código em código vanilla de alto desempenho em tempo de construção.",
+    "data_criacao": "2016",
+    "link": "https://svelte.dev/",
+    "tags": [
+      "framework",
+      "frontend",
+      "compiler",
+      "reativo"
+    ]
+  },
+  {
+    "nome": "Next.js",
+    "descricao": "Framework de React full-stack que permite renderização do lado do servidor (SSR) e geração estática de sites (SSG).",
+    "data_criacao": "2016",
+    "link": "https://nextjs.org/",
+    "tags": [
+      "framework",
+      "fullstack",
+      "frontend",
+      "SSR",
+      "Vercel"
+    ]
+  },
+  {
+    "nome": "Haskell",
+    "descricao": "Linguagem de programação puramente funcional, de tipagem estática e forte, usada frequentemente em pesquisa acadêmica.",
+    "data_criacao": "1990",
+    "link": "https://www.haskell.org/",
+    "tags": [
+      "linguagem de programação",
+      "funcional",
+      "academica",
+      "tipagem estatica"
+    ]
+  },
+  {
+    "nome": "Helm",
+    "descricao": "Gerenciador de pacotes para Kubernetes, que ajuda a definir, instalar e atualizar aplicações Kubernetes.",
+    "data_criacao": "2015",
+    "link": "https://helm.sh/",
+    "tags": [
+      "kubernetes",
+      "devops",
+      "gerenciamento",
+      "ferramenta"
+    ]
+  }
+]

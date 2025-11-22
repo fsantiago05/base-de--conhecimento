@@ -20,8 +20,8 @@ async function carregarDados() {
 function popularCategorias() {
     // Lista de categorias curada que você pediu
     const categoriasPrincipais = [
-        'Back-end',
-        'Front-end',
+        'Backend',
+        'Frontend',
         'Mobile',
         'IA',
         'Banco de Dados',

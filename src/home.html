@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Link para a biblioteca Swiper (Carrossel) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+<body>
+    <header>
+        <h1>Base de Conhecimento</h1>
+        <div class="search-container">
+            <div class="category-dropdown">
+                <button class="category-button" id="category-button">Categorias</button>
+                <div class="category-list" id="category-list">
+                    <!-- Categorias serão inseridas aqui via JS -->
+                </div>
+            </div>
+            <input type="text" id="campo-busca" placeholder="Busque por nome ou tag...">
+            <button id="botao-busca">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contêiner do Swiper para o carrossel de cards -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="cards-container">
+                <!-- Os cards serão inseridos aqui dinamicamente pelo JavaScript -->
+            </div>
+            <!-- Adiciona paginação -->
+            <div class="swiper-pagination"></div>
+            <!-- Adiciona botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div id="no-results" class="no-results" style="display: none;">
+            Nenhum resultado encontrado.
+        </div>
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-links">
+            <li><a href="https://github.com/fsantiago05" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/fabr%C3%ADcio-santiago-90729a370/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

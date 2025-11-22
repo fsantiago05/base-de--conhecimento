@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap'); /* Fonte futurista */
+
+* {
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento. */
+}
+
+:root {
+    --bg-color: #050816; /* Preto azulado profundo */
+    --primary-color: #4f8dff; /* Azul vibrante */
+    --primary-glow: rgba(79, 141, 255, 0.5); /* Glow do azul primário */
+    --secondary-color: #c7d2fe; /* Texto principal, branco azulado claro */
+    --tertiary-color: #8892b0; /* Texto secundário, cinza azulado */
+    --card-bg: #10162f; /* Fundo dos cards, azul muito escuro */
+    --border-color: rgba(79, 141, 255, 0.2); /* Cor da borda com transparência */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão do body. */
+    background: var(--bg-color); /* Define a cor de fundo usando a variável --bg-color. */
+    color: var(--secondary-color); /* Define a cor do texto padrão usando a variável --secondary-color. */
+    font-family: "Exo 2", sans-serif; /* Nova fonte */
+}
+
+header {
+    padding: 2rem 1rem; /* Define um espaçamento interno de 2rem em cima/baixo e 1rem nos lados. */
+    display: flex; /* Habilita o layout flexbox para alinhar os itens filhos. */
+    align-items: center; /* Alinha os itens flex (filhos) verticalmente ao centro. */
+    justify-content: space-around; /* Distribui os itens flex com espaço igual ao redor deles. */
+    position: sticky; /* Faz o cabeçalho "grudar" no topo da tela ao rolar. */
+    top: 0; /* Define a posição do topo para o efeito sticky. */
+    background: rgba(5, 8, 22, 0.8); /* Fundo com transparência */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+    z-index: 10; /* Garante que o cabeçalho fique sobre outros elementos da página. */
+    border-bottom: 1px solid var(--border-color); /* Borda com a nova cor */
+    gap: 1rem; /* Define um espaçamento de 1rem entre os itens flex. */
+}
+
+header h1 {
+    font-size: 1.5rem; /* Define o tamanho da fonte. */
+    margin: 0; /* Remove a margem padrão do h1. */
+    font-weight: 500; /* Define o peso da fonte como médio. */
+    white-space: nowrap; /* Impede que o texto do título quebre em várias linhas. */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+div input {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--tertiary-color);
+    background: transparent;
+    font-family: inherit; /* Faz o input herdar a fonte do elemento pai (body). */
+    font-size: 1.1rem;
+    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades ao mudar de estado. */
+    width: 30rem; /* Define uma largura fixa para o input. */
+    color: var(--secondary-color); /* Define a cor do texto que será digitado. */
+}
+
+div input::placeholder {
+    font-size: 1rem;
+    font-weight: 300; /* Define o peso da fonte do placeholder como leve. */
+    color: var(--tertiary-color); /* Define a cor do texto do placeholder. */
+}
+
+div input:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador. */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-glow); /* Efeito de brilho */
+}
+
+#botao-busca {
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--primary-color);
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" para indicar que é clicável. */
+    font-family: inherit; /* Herda a fonte do elemento pai. */
+    font-weight: 600;
+    font-size: 1rem; /* Define o tamanho da fonte do texto do botão. */
+    white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas. */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Adiciona transições suaves para a cor de fundo e a cor do texto. */
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#botao-busca:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+#botao-busca:active {
+    transform: scale(0.98); /* Cria um efeito de "pressionar" diminuindo o tamanho do botão quando clicado. */
+}
+
+/* Estilos para o dropdown de categoria customizado */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.category-button {
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--tertiary-color);
+    background-color: transparent;
+    color: var(--tertiary-color);
+    font-family: inherit;
+    font-size: 1rem; /* Aumentado para corresponder ao botão de busca */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-button:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+    color: var(--primary-color);
+}
+
+.category-list {
+    display: none;
+    position: absolute;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 0.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.category-list a {
+    color: var(--secondary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.category-list a:hover {
+    background-color: rgba(79, 141, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.show {display: block;}
+
+/* Estilos para o contêiner do Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 450px; /* Largura máxima de um card, para o modo de 1 slide */
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    max-width: 380px; /* Largura do card dentro do slide */
+    min-height: 350px; /* Altura mínima para manter a consistência */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px -15px var(--primary-glow);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.card-icon .icon { /* Alvo é a classe .icon dentro de .card-icon */
+    width: 100%;
+    height: 100%;
+    fill: currentColor; /* Faz o ícone herdar a cor do texto ao redor. */
+    color: var(--primary-color); /* Você pode definir a cor aqui! */
+}
+
+.card h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+}
+
+.card-creation-date {
+    font-size: 0.85rem;
+    color: var(--tertiary-color);
+    margin: 1rem 0 0.5rem;
+}
+
+.card-creation-date strong {
+    font-weight: 500;
+}
+
+.tags-container {
+    display: flex; /* Habilita o layout flexbox. */
+    flex-wrap: wrap; /* Permite que as tags quebrem para a próxima linha. */
+    gap: 0.5rem; /* Define um espaçamento entre as tags. */
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: rgba(79, 141, 255, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem; /* Espaçamento interno da tag. */
+    border-radius: 1rem; /* Arredonda as bordas da tag. */
+    font-size: 0.75rem;
+    font-weight: 500; /* Peso da fonte. */
+    white-space: nowrap; /* Impede que o texto da tag quebre. */
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.card-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-top: auto; /* Empurra o link para o final do card */
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    color: var(--tertiary-color); /* Define a cor do texto. */
+    background-color: var(--bg-color); /* Define a cor de fundo. */
+    padding: 0.75rem 1.5rem; /* Padding vertical diminuído */
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem; /* Define o tamanho da fonte. */
+}
+
+.footer-links {
+    list-style: none; /* Remove os marcadores de bolinha da lista (ul). */
+    display: flex; /* Habilita o layout flexbox. */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço. */
+    justify-content: center; /* Centraliza os links horizontalmente. */
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--secondary-color); /* Define a cor do link. */
+    text-decoration: none; /* Remove o sublinhado do link. */
+    transition: color 0.2s; /* Adiciona uma transição suave para a mudança de cor. */
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Muda a cor do link ao passar o mouse. */
+}
+
+/* Estilização dos controles do Swiper */
+.swiper-pagination-bullet {
+    background: var(--tertiary-color);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color);
+}
+
+/* Estilo para mensagem de "sem resultados" */
+.no-results {
+    color: var(--tertiary-color);
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+}
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header h1 {
+        margin-bottom: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch; /* Faz os itens ocuparem a largura total */
+    }
+
+    .category-dropdown {
+        width: 100%;
+    }
+
+    div input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .swiper-container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .swiper-container {
+        max-width: 90vw; /* Ocupa 90% da largura da tela */
+    }
+}

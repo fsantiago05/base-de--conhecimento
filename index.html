@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base de conhecimento</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- 1. Adicionar CSS do Swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Base de conhecimento</h1>
-        <div>
+        <h1><a href="src/home.html">Base de conhecimento</a></h1>
+        <div class="search-container">
             <input type="text" id="campo-busca" placeholder="Digite uma linguagem de programação">
             <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
+            <!-- Dropdown de Categoria Customizado -->
+            <div class="category-dropdown">
+                <button id="category-button" class="category-button">Categorias</button>
+                <div id="category-list" class="category-list">
+                    <!-- As categorias serão inseridas aqui pelo JavaScript -->
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="card-container">
-            <article class="card">
-            <!--<h2>JavaScript</h2>
-                <p>1995</p>
-                <p>JavaScript é uma linguagem de programação leve, interpretada e baseada em objetos. É amplamente utilizada para desenvolvimento web, permitindo a criação de páginas interativas e dinâmicas.</p>
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Saiba mais</a>
-            </article> -->
-        </section>
+        <!-- 2. Estrutura do Carrossel Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Os cards (slides) serão injetados aqui pelo script.js -->
+            </div>
+            <!-- Paginação (bolinhas) -->
+            <div class="swiper-pagination"></div>
+            <!-- Botões de Navegação (setas) -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -36,6 +48,8 @@
             </li>
         </ul>
     </footer>
-    <script src="script.js"></script>
+    <!-- 3. Adicionar JS do Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
